@@ -1,0 +1,71 @@
+@font-face{
+    font-family: "My Font";
+    src: url("../font/normal/NEXON\ Lv2\ Gothic.eot") format('embedded-opentype'),
+    url("../font/normal/NEXON\ Lv2\ Gothic.ttf"),
+    url("../font/normal/NEXON\ Lv2\ Gothic.woff") format('woff'),
+    url("../font/normal/NEXON\ Lv2\ Gothic\ OTF.otf") format('truetype');
+}
+
+*{margin: 0px; padding: 0px;}
+
+body {
+    font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
+}
+
+div{
+    border: 2px solid black;
+}
+
+div#wrapper ul{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+div#wrapper ul li {
+    list-style-type: none;
+}
+
+div#boardhead {
+    align-items: center;
+    padding: 5px;
+    height: 30px;
+}
+
+div#boardhead ul li{
+    float: left;
+
+}
+
+p#username{
+    padding-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* border: 2px solid red; */
+}
+
+div#boardhead img {
+    width: 30px;
+    height: 30px;
+}
+
+div#boardimage p img {
+    width: 300px;
+    object-fit: cover;
+}
+
+div#actionboard {
+    padding: 10px;
+}
+
+img#share {
+    float: right;
+}
+
+div#actionboard img {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    margin-right: 10px;
+}
