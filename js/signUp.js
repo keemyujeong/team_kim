@@ -15,8 +15,10 @@ function clickSubmit(){
       document.getElementById('InputPhonecall2').innerHTML = xhr.responseText;
       document.getElementById('InputPhonecall3').innerHTML = xhr.responseText;
 
-      xhr.open('POST', './')
+      
     }
   }
+
+  xhr.open('POST', "../")
 }
 
