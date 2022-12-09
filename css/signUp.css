@@ -1,0 +1,40 @@
+*{padding: 0px; margin: 0px;}
+
+@font-face {
+  font-family: "My Font";
+  src: url("../font/bold/NEXON\ Lv2\ Gothic\ Bold.ttf");
+}
+
+.body{
+  /* background-color: #eda80a; */
+  justify-content: center;
+  font-family:"My Font";
+  align-items: center;
+  
+
+
+}
+
+#title{
+  color: black;
+  text-align: center;
+}
+
+#phonecall{
+  display: flex;
+}
+
+#submit{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  
+  
+}
+
+@media screen and (max-width:700px){
+  .body{
+      flex-direction: column;
+  }
+}
