@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/board.css">
+        <script src="./js/board.js"></script>
         <title>게시판</title>
     </head>
     <body>
@@ -16,16 +17,14 @@
             <ul>
                 <li>
                     <div id="boardhead">
-                        <ul>
-                            <li><img src="./img/profle.png" alt="none"></li>
-                            <li><p id="username">사용자명</p></li>
-                        </ul>
+                        <img id="user_pic" src="./img/profle.png" alt="none">
+                        <p id="user_name">사용자명</p>
+                        <p id="user_id">@작성자 아이디</p>
+                        <p id="upload_date">2022/12/09</p>
                     </div>
 
                     <div id="boardimage">
-                        <p>
-                            <img src="./img/testLJH.jpg" alt="none">
-                        </p>
+                        <img id="image" src="./img/testLJH.jpg" alt="none">
                     </div>
 
                     <div id="actionboard">
@@ -33,7 +32,28 @@
                         <img id="comment" src="./img/comment.png" alt="none">
                         <img id="share" src="./img/share.png" alt="none">
                     </div>
-                    <div>댓글</div>
+
+                    <div id="boardarticle">
+                        <p id="article_data">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur eos veniam ipsa alias illo commodi quasi quibusdam numquam eaque. Corporis odio optio quidem doloribus eveniet at, quos id animi aspernatur.</p>
+                    </div>
+
+                    <div id="comment">
+                        <form action="./php/addComment.php" method="post">
+                            <input id="comment_input" type="text" placeholder="댓글을 입력하세요">
+                            <button type="add_com">
+                                <img src="./img/comment_submit.png" alt="none">
+                            </button>   
+                        </form>
+
+                        <div id="recent_com">
+                            <img id="user_pic" src="./img/profle.png" alt="none">
+                            <div id="comment_form">
+                                <p id="com_user">댓글 단 사용자명</p>
+                                <p id="com_content">댓글 내용</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
