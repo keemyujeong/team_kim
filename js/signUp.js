@@ -19,6 +19,6 @@ function clickSubmit(){
     }
   }
 
-  xhr.open('POST', "../")
+  xhr.open('POST', "")
 }
 
