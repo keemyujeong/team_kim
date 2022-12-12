@@ -1,10 +1,9 @@
 <?php
     header('content-Type:text/plain; charset=utf-8');
 
-    $id = $_POST['id'];
-    $password = $_POST['password'];
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $password = $_POST['password'];
     $zipcode = $_POST['zipcode'];
     $address = $_POST['address'];
     $phonecall = $_POST['phonecall'];
@@ -14,10 +13,10 @@
 
     $now = date("Y-m-d H:i:s");
 
-    $db = mysqli_connect("localhost","kyjsoft","appleyummy1!","kyjsoft");
+    $db = mysqli_connect("localhost","teamkim","kimteam1!","teamkim");
     mysqli_query($db, "set names uft8");
 
-    $sql = "INSERT INTO plantBoard(id, password, name, zipcode, address, phonecall) VALUES ('$id', '$password', '$name', '$email', '$zipcode', '$address','$phonecall')";
+    $sql = "INSERT INTO signUpBoard(name, email, password, zipcode, address, phonecall, date) VALUES ('$id', '$password', '$name', '$email', '$zipcode', '$address','$phonecall','$now')";
    
     $result = mysqli_query($db, $sql);
 
