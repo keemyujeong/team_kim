@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>글쓰기</title>
+    <script src="./js/createDoc.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid gray;
+        }
+
+        div#wrapper {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input#title {
+            width: 400px;
+            font-size: large;
+            padding: 5px 10px;
+        }
+
+        textarea#contents {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form action="./php/postContents.php" method="post">
+
+            <div id="title">
+                <input id="title" type="text" required placeholder="제목을 입력하세요">
+            </div>
+
+            <div id="contents">
+                <textarea name="contents" id="contents" cols="100" rows="30" required>작성영역</textarea>
+            </div>
+
+            <div id="pic">사진URL
+                <button>업로드</button>
+            </div>
+
+            <div id="submit">
+                <input type="submit">
+                <button onclick="goBack()">취소</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

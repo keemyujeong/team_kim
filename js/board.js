@@ -1,27 +1,41 @@
-//boardhead - 작성자 정보
-    //user_pic - 작성자 프로필 이미지
-    //user_name - 작성자명
-    //user_id - 작성자 아이디
-    //upload_date - 작성일
+function createDoc() {
+    window.location.href = './createDoc.html'
+}
 
-//boardimage - 업로드된 이미지
-    //image - 이미지
+const columnDefs = [
+    { field: "no", width: 80 },
+    { field: "title", width: 390 },
+    { field: "user", width: 100 },
+    { field: "regDate", width: 110 },
+    { field: "recomCnt", width: 120 },
+];
 
-//actionboard - 유저 반응
-    //like - 좋아요 아이콘
-    //comment - 댓글 아이콘
-    //share - 공유하기 아이콘
+const gridOptions = {
+    columnDefs: columnDefs,
 
-//boardarticle - 업로드된 글
-    //article_data - 글
+    defaultColDef: {
+        editable: true,
+        sortable: true,
+        filter: true,
+        resizable: true
+    },
+    rowSelection: 'multiple',
+    animateRows: true,
 
-//comment - 댓글창
-    //form 요소 - addComment.php 액션
-    //comment_input - 댓글입력란
-    //add_com - 댓글 입력 완료 버튼
+    onCellClicked: params => {
+        console.log('cell was clicked', params)
+        window.location.href = './postContents.html'
+    },
+}; //gridOprions
 
-    //div 요소 - 최신 댓글 보여주기
-    //user_pic - 댓글을 남긴 사용자의 프로필 이미지
-    //com_user - 댓글 단 사용자명
-    //com_content - 댓글 내용
+fetch("./gridData.json")
+    .then(response => response.json())
+    .then(data => {
+        gridOptions.api.setRowData(data);
+    });
 
+// setup the grid after the page has finished loading
+document.addEventListener('DOMContentLoaded', function () {
+    var gridDiv = document.querySelector('#myGrid');
+    new agGrid.Grid(gridDiv, gridOptions);
+});
