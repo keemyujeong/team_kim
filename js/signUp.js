@@ -13,7 +13,7 @@ function clickSubmit(){
     }
   }
 
-  var inputEmail = document.getElementById('InputEmail1').value + "@" + document.getElementById('InputEmail2').value ;
+  var inputEmail = document.getElementById('InputEmail1').value + "@" + document.getElementById('InputEmail2').value;
   var inputPassword = document.getElementById('InputPassword').value;
   var inputName = document.getElementById('InputName').value;
   var inputZipcode = document.getElementById('InputZipcode1').value + document.getElementById('InputZipcode2').value;

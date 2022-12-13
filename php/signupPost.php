@@ -16,7 +16,7 @@
     $db = mysqli_connect("localhost","teamkim","kimteam1!","teamkim");
     mysqli_query($db, "set names uft8");
 
-    $sql = "INSERT INTO signUpBoard(name, email, password, zipcode, address, phonecall, date) VALUES ('$id', '$password', '$name', '$email', '$zipcode', '$address','$phonecall','$now')";
+    $sql = "INSERT INTO signUpBoard(name, email, password, zipcode, address, phonecall, date) VALUES ('$name', '$email', '$password', '$zipcode', '$address','$phonecall','$now')";
    
     $result = mysqli_query($db, $sql);
 
