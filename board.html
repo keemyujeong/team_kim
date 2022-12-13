@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="./css/board.css">
-        <script src="./js/board.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@28.2.1/dist/ag-grid-enterprise.min.js"></script>
-        <title>게시판</title>
-        <style>
-            * {
-                padding: 0px;
-                margin: 0px;
-            }
-    
-            div#myGrid {
-                margin-left: auto;
-                margin-right: auto;
-            }
-    
-            button#createDoc {
-                display: flex;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 20px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="grid-wrapper">
-                <div id="myGrid" class="ag-theme-alpine" style="width: 55%; height: 500px;"></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/board.css">
+    <script src="./js/board.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@28.2.1/dist/ag-grid-enterprise.min.js"></script>
+    <title>게시판</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div#myGrid {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button#createDoc {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-black">게시판</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto">
+                <p class="lead">내 요리를 자랑하고 다른 사람들과 소통해 보세요!</p>
             </div>
-        </div>  
-        <button id="createDoc" onclick="createDoc()">글쓰기</button>
-    </body>
+        </div>
+        <div class="grid-wrapper">
+            <div id="myGrid" class="ag-theme-alpine" style="width: 65%; height: 500px;"></div>
+        </div>
+        <button class="btn btn-primary btn-xl disabled" id="createDoc submitButton" onclick="createDoc()">글쓰기</button>
+    </div>
+</body>
+
 </html>
