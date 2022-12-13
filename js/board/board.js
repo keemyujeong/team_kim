@@ -4,7 +4,7 @@ function createDoc() {
 
 const columnDefs = [
     { field: "no", width: 80 },
-    { field: "title", width: 390 },
+    { field: "title", width: 260 },
     { field: "user", width: 100 },
     { field: "regDate", width: 110 },
     { field: "recomCnt", width: 120 },

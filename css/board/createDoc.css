@@ -788,6 +788,6 @@
   div#contents textarea {
     background-color: white;
     resize: none;
-    border: 2px solid transparent;
-    focu
+    border: none;
+    outline: none;
   }
