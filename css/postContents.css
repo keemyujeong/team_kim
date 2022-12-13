@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid red; */
+}
+div{
+    border: 1px solid gray;
+}
+
+div#no {
+    display: flex;
+    justify-content: right;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+div#wrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#postHead {
+    display: flex;
+    margin: 10px 30px;
+}
+
+div#postHead p {
+    border: 1px solid gray;
+}
+
+div#postHead p#title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#postUser {
+    float: right;
+    text-align: right;
+}
+
+div#postContents {
+    border: 1px solid red;
+    padding: 20px;
+    display: block;
+}
+
+.image{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#recomCnt {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div#btns {
+    display: inline-flex;
+    margin: 10px;
+}
+
+div#btns button{
+    margin: 10px;
+}
+
+div#goBack {
+    display: inline-flex;
+    justify-content: right;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+}
