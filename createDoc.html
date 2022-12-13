@@ -4,23 +4,30 @@
 <head>
     <title>글쓰기</title>
     <script src="./js/createDoc.js"></script>
+
+    <link rel="stylesheet" href="./css/board/createDoc.css">
     <style>
         * {
             padding: 0px;
             margin: 0px;
+            background-color: rgb(253, 248, 241);
         }
 
         div {
             padding: 10px 20px;
             display: flex;
             justify-content: space-around;
-            border: 1px solid gray;
+            /* border: 1px solid gray; */
+            background-color: white;
         }
 
         div#wrapper {
             width: 60%;
             margin-left: auto;
             margin-right: auto;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            opacity: 90%;
         }
 
         input#title {
@@ -38,9 +45,15 @@
 <body>
     <div id="wrapper">
         <form action="./php/postContents.php" method="post">
-
-            <div id="title">
-                <input id="title" type="text" required placeholder="제목을 입력하세요">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7" id="title">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="title" oninput="insertTitle()" type="text" placeholder="제목을 입력하세요"
+                            data-sb-validations="required" required/>
+                        <label for="title">제목</label>
+                        <div class="invalid-feedback" id="insertTitle" data-sb-feedback="name:required">제목을 입력하세요</div>
+                    </div>
+                </div>
             </div>
 
             <div id="contents">
@@ -48,12 +61,12 @@
             </div>
 
             <div id="pic">사진URL
-                <button>업로드</button>
+                <button class="btn btn-primary btn-xl">업로드</button>
             </div>
 
             <div id="submit">
-                <input type="submit">
-                <button onclick="goBack()">취소</button>
+                <input class="btn btn-primary btn-xl" type="submit">
+                <button class="btn btn-primary btn-xl" onclick="goBack()">취소</button>
             </div>
         </form>
     </div>

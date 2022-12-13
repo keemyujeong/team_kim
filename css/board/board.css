@@ -1,22 +1,102 @@
-@font-face{
-    font-family: "My Font";
-    src: url("../font/normal/NEXON\ Lv2\ Gothic.eot") format('embedded-opentype'),
-    url("../font/normal/NEXON\ Lv2\ Gothic.ttf"),
-    url("../font/normal/NEXON\ Lv2\ Gothic.woff") format('woff'),
-    url("../font/normal/NEXON\ Lv2\ Gothic\ OTF.otf") format('truetype');
+@charset "UTF-8";
+
+  /* custom */
+#recipeList{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  /* display: none; */
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
-*{margin: 0px; padding: 0px;
-  font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
+#ko{
+  background-image: url(../../img/index/bibimbap.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
 }
 
-div{
-    border: 1px solid gray;
+#ko a{
+  color: black;
+  transition: 300ms;
 }
 
-/* body div{
-    font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
-} */
+#ko:hover a{
+  color: rgb(255, 178, 63);
+}
+
+#ch{
+  background-image: url(../../img/index/buns.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+}
+
+#ch a{
+  color: black;
+  transition: 300ms;
+}
+
+#ch:hover a{
+  color: rgb(255, 178, 63);
+}
+
+#jp{
+  background-image: url(../../img/index/sushi.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+}
+
+#jp a{
+  color: black;
+  transition: 300ms;
+}
+
+#jp:hover a{
+  color: rgb(255, 178, 63);
+}
+
+#us{
+  background-image: url(../../img/index/steak.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+}
+
+#us a{
+  color: black;
+  transition: 300ms;
+}
+
+#us:hover a{
+  color: rgb(255, 178, 63);
+}
+
+.recipeMenu{
+  padding: 8px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+#recipeList{
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+#recipe:hover #recipeList{
+  opacity: 1;
+  height: 190px;
+  /* display: block; */
+}
 
 .container {
     display: flex;
@@ -37,6 +117,73 @@ div{
   button.export {
     margin-bottom: 5px;
     font-weight: bold;
+  }
+
+  button#createDoc {
+    margin-bottom: 20px;
+  }
+
+  #mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+  }
+  /* 로고 글씨 색 */
+  #mainNav .navbar-brand {
+    color: #F29661;
+  }
+  #mainNav .navbar-nav {
+    margin-top: 1rem;
+  }
+  /* 네비게이션 글씨 색 */
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #000;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+    background: #F29661;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    /* color: #000; */
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #F29661;
+  }
+  #mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+  }
+  
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      transition: padding-top 0.3s, padding-bottom 0.3s;
+    }
+    #mainNav .navbar-brand {
+      font-size: 1.75em;
+      transition: font-size 0.3s;
+    }
+    #mainNav .navbar-nav {
+      margin-top: 0;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: #fff;
+      background: #F29661;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+      color: #fff;
+      background: #F29661;
+    }
+  
+    #mainNav.navbar-shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.5em;
+    }
   }
 
   /* @charset "UTF-8"; */
@@ -533,6 +680,9 @@ div{
   .lead {
     font-size: 1.25rem;
     font-weight: 300;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
   }
   
   .display-1 {
@@ -711,8 +861,9 @@ div{
   .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap:nowrap; */
+    width: 200px;
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-0.5 * var(--bs-gutter-x));
     margin-left: calc(-0.5 * var(--bs-gutter-x));
@@ -11373,14 +11524,14 @@ div{
     margin-left: 1rem;
   }
   .divider-custom .divider-custom-icon {
-    color: #000;
+    color: #2c3e50;
     font-size: 2rem;
   }
   .divider-custom.divider-light .divider-custom-line {
-    background-color: #000;
+    background-color: #fff;
   }
   .divider-custom.divider-light .divider-custom-icon {
-    color: #000;
+    color: #fff;
   }
   
   .btn-xl {

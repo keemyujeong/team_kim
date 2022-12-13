@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./css/postContents.css">
-    <script src="./js/postContents.js"></script>
+    <link rel="stylesheet" href="./css/board/postContents.css">
+    <script src="./js/board/postContents.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 
         <div id="postContents">
             <div id="insertImg">
-                <img class="image" src="./img/test_img.jpg" alt="">
+                <img class="image" src="./img/board/test_img.jpg" alt="">
             </div>
             <p id="insertText">내용을 엄청 길게 이렇게 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, repellat. Harum ipsa voluptatem optio voluptates modi repudiandae cumque neque autem eos perspiciatis, magni ipsam quisquam aut ab dignissimos minus odio.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptate pariatur exercitationem veniam dignissimos earum eveniet quo praesentium et? Modi numquam illo expedita sapiente vitae at, vel quasi earum dolorem!
@@ -32,11 +32,11 @@
             <p>추천수</p>
         </div>
         <div id="btns">
-            <button onclick="goEdit()">수정</button>
-            <button>삭제</button>
+            <button class="btn btn-primary btn-xl"  onclick="goEdit()">수정</button>
+            <button class="btn btn-primary btn-xl">삭제</button>
         </div>
         <div id="goBack">
-            <button onclick="goBack()">목록으로</button>
+            <button class="btn btn-primary btn-xl"  onclick="goBack()">목록으로</button>
         </div>
     </div>
 </body>
