@@ -836,6 +836,7 @@ div#contents * {
   display: flex;
   justify-content: center;
   background-color: white;
+  align-items: center;
 }
 
 div#contents{
@@ -849,4 +850,8 @@ p#title{
 
 div#writer>p{
   background-color: white;
+  margin-bottom: 10px;
 }
+
+
+

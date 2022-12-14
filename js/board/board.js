@@ -4,10 +4,10 @@ function createDoc() {
 
 const columnDefs = [
     { field: "no", width: 80 },
-    { field: "title", width: 260 },
-    { field: "user", width: 100 },
-    { field: "regDate", width: 110 },
-    { field: "recomCnt", width: 120 },
+    { field: "title", width: 400 },
+    { field: "user", width: 150 },
+    { field: "regDate", width: 120 },
+    { field: "recomCnt", width: 150 },
 ];
 
 const gridOptions = {
