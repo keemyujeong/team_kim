@@ -867,12 +867,6 @@ body{
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-style: normal;
-}
-
 
 h1 {
     font-family: 'NEXON Lv2 Gothic',serif;
@@ -886,6 +880,7 @@ h1 {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h1, .h1 {
+    font-family: 'NEXON Lv2 Gothic',serif;
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-weight: 500;
