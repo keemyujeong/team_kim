@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
   }
 
 
@@ -319,6 +320,7 @@
 
   .form-floating {
     position: relative;
+    width: 50%;
   }
   .form-floating > .form-control,
   .form-floating > .form-select {
@@ -790,4 +792,29 @@
     resize: none;
     border: none;
     outline: none;
+    border: 0.125rem solid transparent;
+    margin: 10px;
+  }
+
+  div#contents {
+    border: 0.125rem solid #ced4da;
+    
+    background-color: white;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
+
+  div#pic {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  div#submit {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
