@@ -1,7 +1,5 @@
 <?php
-    header('content-Type:text/plain; charset=utf-8');
-
-    include('')
+    header('Content-Type:text/plain; charset=utf-8');
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -18,7 +16,7 @@
     $db = mysqli_connect("localhost","teamkim","kimteam1!","teamkim");
     mysqli_query($db, "set names uft8");
 
-    $sql = "INSERT INTO signUpBoard(name, email, password, zipcode, address, phonecall, date) VALUES ('$name', '$email','$password', '$zipcode', '$address','$phonecall','$now')";
+    $sql = "INSERT INTO signUpBoard(name, email, password, zipcode, address, phonecall, date) VALUES ('$name', '$email', '$password', '$zipcode', '$address','$phonecall','$now')";
    
     $result = mysqli_query($db, $sql);
 
@@ -31,33 +29,14 @@
         mysqli_real_escape_string($db,$_POST['address']);
         mysqli_real_escape_string($db,$_POST['phonecall']);
 
-        //에러를 체크 
-        if(empty($name)){
-            header("location: signupPost.php?error=아이디가 비어있어요");
-            exit();
-        }else if(empty($email)){
-            header("location: signupPost.php?error=이메일이 비어있어요");
-            exit();
-        }else if(empty($password)){
-            header("location: signupPost.php?error=비밀번호가 비어있어요");
-            exit();
-        }else if(empty($zipcode)){
-            header("location: signupPost.php?error=집코드가 비어있어요");
-            exit();
-        }else if(empty($address)){
-            header("location: signupPost.php?error=주소가 비어있어요");
-            exit();
-        }else if(empty($phonecall)){
-            header("location: signupPost.php?error=전화번호가 비어있어요");
-            exit();
-        }
+      
     }
-
 
     if($result) echo "insert success";
     else echo "insert failed";
 
 
     mysqli_close($db);
+
 
 ?>
