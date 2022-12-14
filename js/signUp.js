@@ -10,16 +10,15 @@ function clickSubmit(){
     }
   }
 
+  let inputEmail = document.getElementById('InputEmail1').value + "@" + document.getElementById('InputEmail2').value;
+  let inputPassword = document.getElementById('InputPassword').value;
+  let inputName = document.getElementById('InputName').value;
+  let inputZipcode = document.getElementById('InputZipcode1').value + document.getElementById('InputZipcode2').value;
+  let inputAddress = document.getElementById('InputAddress').value;
+  let phonecall = document.getElementById('InputPhonecall1').value + document.getElementById('InputPhonecall2').value + document.getElementById('inputPhonecall3').value;
 
-  var inputEmail = document.getElementById('InputEmail1').value + "@" + document.getElementById('InputEmail2').value;
-  var inputPassword = document.getElementById('InputPassword').value;
-  var inputName = document.getElementById('InputName').value;
-  var inputZipcode = document.getElementById('InputZipcode1').value + document.getElementById('InputZipcode2').value;
-  var inputAddress = document.getElementById('InputAddress').value;
-  var phonecall = document.getElementById('InputPhonecall1').value + document.getElementById('InputPhonecall2').value + document.getElementById('inputPhonecall3').value;
 
-
-  xhr.open('POST', "../php/signupPost.php", true);
+  xhr.open('POST', 'http://teamkim.dothome.co.kr/TeamProject/php/signupPost.php', true);
 
   xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
   xhr.send(

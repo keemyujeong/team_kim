@@ -1,5 +1,5 @@
 <?php
-    header('content-Type:text/plain; charset=utf-8');
+    header('Content-Type:text/plain; charset=utf-8');
 
     $name = $_POST['name'];
     $email = $_POST['email'];
