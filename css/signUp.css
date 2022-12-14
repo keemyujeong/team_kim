@@ -1,0 +1,87 @@
+*{padding: 0px; margin: 0px;}
+
+@font-face {
+  font-family: "My Font";
+  src: url("../font/bold/NEXON\ Lv2\ Gothic\ Bold.ttf");
+}
+
+.body{
+  /* background-color: #eda80a; */
+  font-family:"My Font";
+  
+  min-height: 100vh;
+
+  background: -webkit-linear-gradient(bottom left, #f6d87f 0%, #eda80a 100%);
+  background: -moz-linear-gradient(bottom left, #f6d87f 0%, #eda80a 100%);
+  background: -o-linear-gradient(bottom left, #f6d87f 0%, #eda80a 100%);
+  background: linear-gradient(to top right, #f6d87f 0%, #eda80a 100%);
+
+}
+
+.input-form {
+  max-width: 680px;
+  margin-top: 80px;
+  padding: 32px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+}
+
+h3{
+  text-align: center;
+  padding: 32px;
+}
+
+#flex{
+  display: flex;
+}
+
+#submit{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  
+}
+
+#already{
+  text-align: center;
+  padding: 24px;
+}
+
+
+
+
+
+@media screen and (max-width:700px){
+  .body{
+      flex-direction: column;
+  }
+}
+
+.input:invalid {
+  max-width: 680px;
+  margin-top: 80px;
+  padding: 32px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+}
