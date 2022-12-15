@@ -3,7 +3,8 @@
 
 <head>
     <title>글쓰기</title>
-    <script src="./js/createDoc.js"></script>
+    <script src="./js/board/createDoc.js"></script>
+    <script src="./php/board/createDoc.php"></script>
 
     <link rel="stylesheet" href="./css/board/createDoc.css">
     <style>
@@ -59,20 +60,18 @@
 
 <body>
     <div id="wrapper">
-        <form action="./html/TeamProject/php/createDoc.php" method="post">
+        <form id="docForm" action="./php/board/createDoc.php" method="post">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7" id="title">
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="title" oninput="insertTitle()" type="text" placeholder="제목을 입력하세요"
-                            data-sb-validations="required" required/>
+                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요"/>
                         <label for="title">제목</label>
-                        <div class="invalid-feedback" id="insertTitle" data-sb-feedback="name:required">제목을 입력하세요</div>
                     </div>
                 </div>
             </div>
 
             <div id="contents">
-                <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요" required></textarea>
+                <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요"></textarea>
             </div>
 
             <div id="pic">사진URL
@@ -80,8 +79,8 @@
             </div>
 
             <div id="submit">
-                <input class="btn btn-primary btn-xl" type="submit">
-                <button class="btn btn-primary btn-xl" onclick="goBack()">취소</button>
+                <input class="btn btn-primary btn-xl" onclick="checkContents()" type="submit">
+                <button class="btn btn-primary btn-xl" onclick="history.back(); return false;">취소</button>
             </div>
         </form>
     </div>

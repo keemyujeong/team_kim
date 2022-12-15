@@ -1,15 +1,15 @@
-function goBack(){
-    window.history.back();
-}
+function checkContents(){    
+    window.location.href = './postContents.html';
+    
+    var title = document.getElementById('title');
+    var text = document.getElementById('contents');
+    // var msg = document.getElementById('insertTitle');
+    var check = document.docForm;
 
-function insertTitle(){
-    var title = document.getElementById('title').value;
-    var msg = document.getElementById('insertTitle');
+    title.required == true;
+    text.required == true;
 
-    if(title == ''){
-        msg.style.display = 'block';
-        msg.innerHTML = '제목을 입력하세요';
-    }else{
-        msg.style.display = 'none';
+    if(title == '' || text == ''){
+        alert('제목 또는 내용을 입력하세요');
     }
 }
