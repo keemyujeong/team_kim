@@ -20,30 +20,37 @@
             font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
             padding: 0px;
             margin: 0px;
-            background-color: rgb(253, 248, 241);
+            background-color: white;
             /* border: 1px solid gray; */
         }
 
         div {
-            padding: 10px 20px;
             display: flex;
             justify-content: space-around;
-            /* border: 1px solid gray; */
-            background-color: white;
         }
 
-        body{
+        /* mmmmmmmmm PC mmmmmmmmmm */
+        @media(min-width: 1025px) {
+            body {
+            padding: 5%;
             height: 100vh;
+            background-color: rgb(253, 248, 241);
+            margin-bottom: 30px;
         }
 
         div#wrapper {
-            width: 60%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            border-left: 1px solid gray;
-            border-right: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            margin-left: 8%;
+            margin-right: 8%;
+            border-left: 1px solid red;
+            border-right: 1px solid red;
             opacity: 90%;
+            border: 2px solid rgba(128, 128, 128, 0.425);
+            padding: 60px 40px;
+            border-radius: 10px;
         }
 
         input#title {
@@ -52,8 +59,83 @@
             padding: 5px 10px;
         }
 
-        textarea#contents {
-            padding: 10px;
+        #contents {
+            width: 80%;
+            display: block;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+
+
+        }
+
+        /* mmmmmmmmm 태블릿 mmmmmmmmmm */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            body {
+            padding: 2%;
+            height: 100vh;
+            background-color: rgb(253, 248, 241);
+        }
+
+        div#wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            opacity: 90%;
+            border: 2px solid rgba(128, 128, 128, 0.425);
+            padding: 60px 40px;
+            border-radius: 10px;
+        }
+
+        input#title {
+            width: 100%;
+            font-size: large;
+            padding: 5px 10px;
+        }
+
+        #contents {
+            width: 98%;
+            /* display: block; */
+            /* margin-top: 5%;
+            margin-bottom: 5%; */
+        }
+
+        form {
+            width: 100%;
+        }
+        }
+
+        /* mmmmmmmmm 모바일 mmmmmmmmmm */
+        @media (max-width: 768px) {
+
+        div#wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            opacity: 90%;
+        }
+
+        input#title {
+            width: 100%;
+            font-size: large;
+            padding: 5px 10px;
+        }
+
+        #contents {
+            width: 92%;
+        }
+
+        form {
+            width: 100%;
+        }
+
         }
     </style>
 </head>
@@ -64,14 +146,16 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7" id="title">
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요"/>
+                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요" />
                         <label for="title">제목</label>
                     </div>
                 </div>
             </div>
 
-            <div id="contents">
-                <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요"></textarea>
+            <div>
+                <div id="contents">
+                    <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요"></textarea>
+                </div>
             </div>
 
             <div id="pic">사진URL

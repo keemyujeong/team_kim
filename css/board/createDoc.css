@@ -20,14 +20,6 @@
     margin-top: var(--bs-gutter-y);
   }
 
-  div#wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-  }
-
-
 
 /* 버튼 */
 .btn {

@@ -18,7 +18,7 @@
             padding: 0px;
             margin: 0px;
             background-color: rgb(253, 248, 241);
-            /* border: 1px solid gray; */
+            border: 1px solid gray;
         }
 
         div {
@@ -26,54 +26,101 @@
             display: flex;
             justify-content: space-around;
             /* border: 1px solid gray; */
-            background-color: white;
+            /* background-color: white; */
         }
 
-        body {
-            height: 100vh;
+        /* mmmmmmmmm PC mmmmmmmmmm */
+        @media(min-width: 1025px) {
+            body {
+            padding-top: 5%;
+            height: 30vh;
         }
 
         div#wrapper {
-            width: 60%;
-            height: 100vh;
+            width: 80%;
+            height: 100%;
+            margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
-            border-left: 1px solid gray;
-            border-right: 1px solid gray;
+            /* border: 1px solid gray; */
             opacity: 90%;
+        }
+        }
+
+        /* mmmmmmmmm 태블릿 mmmmmmmmmm */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            body {
+            padding-top: 5%;
+            height: 30vh;
+        }
+
+        div#wrapper {
+            width: 80%;
+            height: 100%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 1px solid gray; */
+            opacity: 90%;
+        }
+        }
+
+        /* mmmmmmmmm 모바일 mmmmmmmmmm */
+        @media (max-width: 768px) {
+            body {
+            padding-top: 5%;
+            height: 30vh;
+        }
+
+        div#wrapper {
+            width: 80%;
+            height: 100%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 1px solid gray; */
+            opacity: 90%;
+        }
         }
     </style>
 </head>
 
 <body>
-
+    <div>
     <div id="wrapper">
-        <div id="contents">
-            <div>
-                <p id="title">포스팅 제목을 이렇게 길게 써보았습니다</p>
+        <div>
+            <div id="arrow-wrap">
+                <img class="arrow" src="./img/board/left-arrow.png" alt="">
             </div>
-            <div id="writer">
-                <p>작성자 이름</p>
-                <p>2022.12.14</p>
-            </div>
+            <div id="contents">
+                <div>
+                    <p id="title">포스팅 제목을 이렇게 길게 써보았습니다</p>
+                </div>
+                <div id="writer">
+                    <p>작성자 이름</p>
+                    <p>2022.12.14</p>
+                </div>
 
-            <div>
-                <img src="./img/board/test_img.jpg" alt="" id="content-img">
+                <div>
+                    <img src="./img/board/test_img.jpg" alt="" id="content-img">
+                </div>
+                <div>
+                    <p id="content-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quisquam earum repellat
+                        facere
+                        quis doloribus eveniet exercitationem laudantium enim maxime, quod minima, unde libero quidem,
+                        similique est labore vero corporis!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates aliquid magnam, repellat
+                        labore
+                        veritatis esse debitis quaerat sunt cumque error distinctio temporibus, incidunt pariatur
+                        voluptate
+                        optio fugit dolorem quasi. Perspiciatis.
+                    </p>
+                </div>
             </div>
-            <div>
-                <p id="content-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quisquam earum repellat
-                    facere
-                    quis doloribus eveniet exercitationem laudantium enim maxime, quod minima, unde libero quidem,
-                    similique est labore vero corporis!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates aliquid magnam, repellat
-                    labore
-                    veritatis esse debitis quaerat sunt cumque error distinctio temporibus, incidunt pariatur
-                    voluptate
-                    optio fugit dolorem quasi. Perspiciatis.
-                </p>
+            <div id="arrow-wrap">
+                <img class="arrow" src="./img/board/right-arrow.png" alt="">
             </div>
-
         </div>
         <div id="submit">
             <button class="btn btn-primary btn-xl" onclick="">삭제</button>
@@ -82,6 +129,7 @@
         </div>
 
     </div>
+</div>
 </body>
 
 </html>
