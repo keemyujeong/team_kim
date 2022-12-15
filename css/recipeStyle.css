@@ -92,6 +92,20 @@ body{
   margin-left: auto;
 }
 
+.container-ca,
+.container-fluid-ca,
+.container-xxl-ca,
+.container-xl-ca,
+.container-lg-ca,
+.container-md-ca,
+.container-sm-ca {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* 이미지 설정 */
 .img-fluid {
     overflow: hidden;
@@ -868,7 +882,7 @@ body{
 }
 
 
-h1 {
+h1, .h1 {
     font-family: 'NEXON Lv2 Gothic',serif;
     display: block;
     font-size: 2em;
@@ -879,7 +893,7 @@ h1 {
     font-weight: bold;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3 {
     font-family: 'NEXON Lv2 Gothic',serif;
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -933,6 +947,11 @@ h2, .h2{
 .text-center {
     text-align: center !important;
 }
+
+.nexon-font{
+  font-family: 'NEXON Lv2 Gothic',serif;
+  font-weight: bold;
+}
   /* 글귀 설정  */
 
 /* container */
@@ -951,6 +970,32 @@ h2, .h2{
 @media (min-width: 1024px) {
     .container-md, .container-sm, .container {
       max-width: 1000px;
+    }
+}
+/* container */
+
+/* container-category */
+@media (min-width: 576px){
+  .container-sm-ca, .container-ca {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+    .container-md-ca, .container-sm-ca, .container-ca {
+      max-width: 720px;
+    }
+}
+
+@media (min-width: 100px) {
+  .container-md-ca, .container-sm-ca, .container-ca {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+    .container-md-ca, .container-sm-ca, .container-ca {
+      max-width: 1160px;
     }
 }
 /* container */
@@ -983,132 +1028,78 @@ h2, .h2{
     }
 }
 
+/* category */
+@media (min-width: 1024px){
+  .col-lg-7-ca {
+      flex: 0 0 auto;
+      width: 100%
+  }
+}
+
+@media (min-width: 1024px){
+  .col-lg-5-ca {
+      flex: 0 0 auto;
+      width: 100%
+  }
+}
+
+@media (min-width: 1024px){
+  .g-lg-5, .gx-lg-5 {
+      --bs-gutter-x: 3rem;
+  }
+}
+
 /* pc 버전 모양 */
 
-/* nav */
-#mainNav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 700;
+/* 이미지 호버 */
+.img-hover{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  overflow: hidden;
 }
 
-.bg-secondary-nav {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+.img-hover:hover{
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+/* 이미지 호버 */
+
+/* 텍스트 호버 */
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
 }
 
-.container-nav,
-.container-fluid-nav,
-.container-xxl-nav,
-.container-xl-nav,
-.container-lg-nav,
-.container-md-nav,
-.container-sm-nav {
+
+/* 연습용 */
+.test { 
+  color: #000;
+  display:inline-block; 
+  margin:0;
+  text-transform:uppercase; }
+.test:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #ffbe44;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.test:hover:after { transform: scaleX(1); }
+.test:after{  transform-origin:  0% 50%; }
+
+.textchange{
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
+  height: 400%;
+  background-color: rgb(255, 195, 106);
+  text-align: center;
+  transition: all 0.75s;
 }
 
-.navbar > .container-nav, .navbar > .container-fluid-nav, .navbar > .container-sm-nav, .navbar > .container-md-nav, .navbar > .container-lg-nav, .navbar > .container-xl-nav, .navbar > .container-xxl-nav {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
+.textchange:hover{
+  background-color: rgb(238, 174, 137);
 }
-
-.navbar {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-@media (min-width: 576px){
-    .container-sm-nav, .container-nav {
-        max-width: 540px;
-    }
-}
-
-.navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 0.125rem solid transparent;
-    border-radius: 0.5rem;
-    transition: box-shadow 0.15s ease-in-out;
-}
-
-element.style {
-    background-color: #F29661;
-}
-
-#mainNav .navbar-toggler {
-    font-size: 80%;
-    padding: 0.8rem;
-}
-
-button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
-    cursor: pointer;
-}
-
-.rounded-nav {
-    border-radius: 0.5rem !important;
-}
-
-button, [type=button], [type=reset], [type=submit] {
-    -webkit-appearance: button;
-}
-
-input, button, select, optgroup, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-button {
-    border-radius: 0;
-}
-
-button {
-    appearance: auto;
-    writing-mode: horizontal-tb !important;
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
-    font-family: ;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    margin: 0em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
-}
-
-/* nav */
