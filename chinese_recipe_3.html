@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>레시피</title>
+        <link rel="stylesheet" href="./css/recipeStyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- <link href="css/index/nav.css" rel="stylesheet" /> -->
+
+        <style>
+            @font-face{
+                font-family: "My font";
+                src: url(./font/medium/NEXON\ Lv2\ Gothic\ Medium.ttf);
+            }
+            *{
+                font-family: "My font", serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                </div>
+            </div>
+        </nav> -->
+        <!-- <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html" style="border: 3px solid #F29661; border-radius: 32px; padding: 8px;">team kim</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                style="background-color: #F29661;">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1" id="recipe"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">레시피</a>
+                            <ul id="recipeList">
+                                <li id="ko"><a href="./kofood.html" class="recipeMenu">한식</a></li>
+                                <li id="ch"><a href="./chfood.html" class="recipeMenu">중식</a></li>
+                                <li id="jp"><a href="./jpfood.html" class="recipeMenu">일식</a></li>
+                                <li id="us"><a href="./usfood.html" class="recipeMenu">양식</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./board.html">게시판</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./aboutus.html">About Us</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./login.html">로그인</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./signup.html">회원가입</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/index/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <!-- 요리 이미지 -->
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/japanese/1/2022-07-01_786638811[1].jpg" alt="..." /></div>
+                <div class="col-lg-5">
+                    <!-- 요리 이름 -->
+                    <h1 class="font-weight-light">라조장 깐풍기</h1>
+                    <!-- 요리 설명 -->
+                    <p class="food">라조장을 넣고 볶아 매콤달콤한 맛은 물론이고 입맛 당기는 얼얼한 맛까지 제대로 추가한 깐풍기. 술안주로도 밥반찬으로도 좋은 중화풍 가정식 닭고기 요리</p>
+                </div>
+            </div>
+            
+            <div class="card text-white bg-secondary my-5 text-center">
+                <div class="card-body textchange text-white py-4 m-0 tip " 
+                onmouseover="this.innerHTML='1 테이블스푼 (1T) = 15ml'" 
+                onmouseout="this.innerHTML='한줄요리 Tip !'">
+                한줄 요리 Tip !</div>
+            </div>
+            <!-- Content Row-->
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body" >
+                            <!-- 조리 시간, 인분, 칼로리 -->
+                            <h2 class="card-title" style="color: #ff7167;">준비시간 : <span style="color: rgb(102, 102, 102); font-weight: normal;">15분</span> </h2>
+                            <h2 class="card-title" style="color: #ff7167;" >요리시간 : <span style="color: rgb(102, 102, 102); font-weight: normal;">25분</span> </h2>
+                            <h2 class="card-title" style="color: #ff7167;">인분수 : <span style="color: rgb(102, 102, 102); font-weight: normal;">2인분</span> </h2>
+                            <h2 class="card-title" style="color: #ff7167;">칼로리 : <span style="color: rgb(102, 102, 102); font-weight: normal;">358.6kcal</span> </h2>
+                            <p class="card-text" style="font-size: 80%;">해당 레시피 1인분당 예상되는 영양정보이며, 식재료의 생산방법, 사용부위 및 사용량 등 기타 변수에 따라 차이가 발생할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <!-- 레시피 재료 -->
+                            <h2 class="card-title" style="color: #ff7167;"># 필수 재료</h2>
+                            <p class="card-text nexon-font">닭고기(가슴살과 다리살 섞어서)300g, 소금/후추약간, 계란 흰자1개 분, 불린 감자전분100g, 마늘3쪽, 청고추/홍고추1개씩, 대파1/3개, 라조장 산초2큰술</p>
+                            <h2 class="card-title" style="color: #ff7167;"># 선택 재료</h2>
+                            <p class="card-text nexon-font"></p>
+                            <h2 class="card-title" style="color: #ff7167;"># 양념</h2>
+                            <p class="card-text nexon-font">생강2g, 간장1큰술, 후추약간, 굴소스1작은술, 설탕1큰술, 식초2큰술, 청주1작은술, 참기름약간, 라조장 산초2큰술</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <!-- 미정 -->
+                            <h2 class="card-title" style="color: #ff7167;">관련 레시피 </h2>
+                            <fieldset>
+                                <legend class="nexon-font" style="font-size: 120%;"> 김치 잔치국수 </legend>
+                                <p class="card-text nexon-font" style="margin-top: 0px;">#국수맛집 #김치 #장국 #분식집 #따끈한국물/p>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend class="nexon-font" style="font-size: 120%;"> 쇠고기 버섯 쌀국수 </legend>
+                                <p class="card-text nexon-font" style="margin-top: 0px;">#장국 #따끈한국물 #국수맛집 #버섯 #쇠고기</p>
+                            </fieldset>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 요리 설명 영역 -->
+            <hr>
+            <div style="padding-left: 20px; padding-top: 20px;">
+                
+                <h2 style="margin-bottom: 20px;">만드는 방법</h2>
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_1.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 1</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">마늘, 생강은 다지고 대파는 반으로 갈라서 잘게 썰고, 청고추 홍고추도 잘게 썬다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_2.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 2</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">닭고기를 먹기 좋은 크기로 썬다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_3.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 3</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">닭고기를 보울에 넣은 후 소금, 후추, 계란 흰자, 불린 감자전분을 넣고 점도가 생길 때 까지 손으로 섞어 튀김옷을 입힌다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_4.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 4</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">간장, 굴소스, 설탕, 식초, 청주, 후추를 미리 섞어 소스로 만들어 둔다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_5.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 5</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">170~ 180℃로 예열한 기름에 닭고기를 넣어 튀긴다. <br>
+                    (tip) 닭고기가 서로 달라붙지 않도록 집게나 젓가락으로 툭툭 건드려주세요. <br>                    
+                    이 과정에서 튀김옷에 균열이 생겨 더욱 바삭해집니다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_6.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 6</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">튀김을 건져내 잠깐 식힌 뒤, 여분의 수분을 날릴 수 있도록 한 번 더 튀겨준다. <br>
+                    (tip) 2~3회까지 튀겨주면 좋습니다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_7.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 6</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">라조장 1큰술(건더기 1큰술)에 대파, 마늘, 생강, 청고추, 홍고추를 넣고 볶아준다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_8.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 6</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">라조장 1큰술(고추기름 1큰술)을 넣고 볶아 향을 낸다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_9.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 6</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">팬에 튀긴 닭고기와 소스를 넣고 볶아준다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_10.jpg" alt="..." /></div>
+                <h2 class="card-title" style="color: #ff7167;">STEP 6</h2>
+                <p class="card-text nexon-font" style="margin-top: 3px;">향이 어느 정도 올라오면 준비해둔 깐풍소스를 넣고 한 번 끓인다.</p>
+
+                <div class="cook-img"><img class="img-fluid rounded mb-4 mb-lg-0" src="./img/chinese/3/194_11.jpg" alt="..." /></div>
+
+
+
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>
