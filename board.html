@@ -12,7 +12,7 @@
     <script src="./php/board/board.php"></script>
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@28.2.1/dist/ag-grid-enterprise.min.js"></script>
     <style>
-        @font-face {
+                @font-face {
             font-family: "My Font";
             src: url("../font/normal/NEXON\ Lv2\ Gothic.eot") format('embedded-opentype'),
                 url("../font/normal/NEXON\ Lv2\ Gothic.ttf"),
@@ -24,8 +24,6 @@
             font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
             padding: 0px;
             margin: 0px;
-            background-color: white;
-            /* border: 1px solid gray; */
         }
 
         div#myGrid {
@@ -35,9 +33,9 @@
             width: 100%;
         }
 
-        /* div#container{
-            margin-bottom: 100px;
-        } */
+        .container{
+            background-color: white;
+        }
 
         button#createDoc {
             display: flex;
@@ -45,13 +43,6 @@
             margin-right: auto;
             margin-top: 20px;
         }
-/* 
-        .container {
-            height: 85vh;
-            border: 2px solid rgba(128, 128, 128, 0.425);
-            padding: 60px 40px;
-            border-radius: 10px;
-        } */
 
         /* mmmmmmmmm PC mmmmmmmmmm */
         @media(min-width: 1025px) {
@@ -157,7 +148,8 @@
         <button class="btn btn-primary btn-xl" id="createDoc" onclick="createDoc()">글쓰기</button>
 
         <div class="grid-wrapper">
-            <div id="myGrid" class="ag-theme-alpine" style="height: 55vh;"></div>
+            <div id="myGrid" class="ag-theme-alpine" style="height: 55vh;">
+            </div>
         </div>
     </div>
 </body>

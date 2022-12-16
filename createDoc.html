@@ -4,7 +4,7 @@
 <head>
     <title>글쓰기</title>
     <script src="./js/board/createDoc.js"></script>
-    <script src="./php/board/createDoc.php"></script>
+    <!-- <script src="./php/board/createDoc.php"></script> -->
 
     <link rel="stylesheet" href="./css/board/createDoc.css">
     <style>
@@ -142,11 +142,11 @@
 
 <body>
     <div id="wrapper">
-        <form id="docForm" action="./php/board/createDoc.php" method="post">
+        <form id="docForm" action="" method="post">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7" id="title">
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요" />
+                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요" required/>
                         <label for="title">제목</label>
                     </div>
                 </div>
@@ -154,16 +154,16 @@
 
             <div>
                 <div id="contents">
-                    <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요"></textarea>
+                    <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요" required></textarea>
                 </div>
             </div>
 
             <div id="pic">사진URL
-                <button class="btn btn-primary btn-xl">업로드</button>
+                <button class="btn btn-primary btn-xl" onclick="alert('사진 업로드')">업로드</button>
             </div>
 
             <div id="submit">
-                <input class="btn btn-primary btn-xl" onclick="checkContents()" type="submit">
+                <input class="btn btn-primary btn-xl" onclick="alert('문서 작성 완료')" type="submit" placeholder="완료">
                 <button class="btn btn-primary btn-xl" onclick="history.back(); return false;">취소</button>
             </div>
         </form>
