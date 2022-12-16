@@ -4,7 +4,7 @@
 
     echo $title + $contents;
 
-    $db=mysqli_connect("localhost","ezra2022","ezra1409*","ezra2022");
+    $db=mysqli_connect("localhost","teamkim","kimteam1!","teamkim");
     mysqli_query($db, "set names utf8");
 
     $noCnt="SELECT COUNT(*) FROM board"
