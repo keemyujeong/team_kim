@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 비밀번호 유효성 검사
 
 function changePhone1(){
@@ -19,12 +20,15 @@ function checkNumber(event) {
 
 
 
+=======
+>>>>>>> 1feeef7d003c8f6719f2926fdfcfc25c06cc0c86
 // 비밀번호 유효성 검사 해야함
 
 
 function clickSubmit(){
 
   var xhr = new XMLHttpRequest();
+<<<<<<< HEAD
 
   var error= document.getElementById("error");
 
@@ -50,6 +54,12 @@ function clickSubmit(){
 
     }
     
+=======
+  xhr.onreadystatechange = function(){
+    if(xhr.readyState==4 && xhr.status==200){
+      alert("회원가입에 성공하셨습니다!")
+    }
+>>>>>>> 1feeef7d003c8f6719f2926fdfcfc25c06cc0c86
   }
 
   let inputEmail = document.getElementById('InputEmail1').value + "@" + document.getElementById('InputEmail2').value;
@@ -60,7 +70,10 @@ function clickSubmit(){
   let phonecall = document.getElementById('InputPhonecall1').value + document.getElementById('InputPhonecall2').value + document.getElementById('inputPhonecall3').value;
 
 
+<<<<<<< HEAD
   //
+=======
+>>>>>>> 1feeef7d003c8f6719f2926fdfcfc25c06cc0c86
   xhr.open('POST', 'http://teamkim.dothome.co.kr/TeamProject/php/signupPost.php', true);
 
   xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -87,4 +100,8 @@ function clickPhonecall(){
 
 function searchZipcode(){
   alert("우편번호 검색창으로 이동합니다.")
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1feeef7d003c8f6719f2926fdfcfc25c06cc0c86

@@ -3,24 +3,54 @@
 
 <head>
     <title>글쓰기</title>
-    <script src="./js/createDoc.js"></script>
+    <script src="./js/board/createDoc.js"></script>
+    <!-- <script src="./php/board/createDoc.php"></script> -->
+
+    <link rel="stylesheet" href="./css/board/createDoc.css">
     <style>
+        @font-face {
+            font-family: "My Font";
+            src: url("../font/normal/NEXON\ Lv2\ Gothic.eot") format('embedded-opentype'),
+                url("../font/normal/NEXON\ Lv2\ Gothic.ttf"),
+                url("../font/normal/NEXON\ Lv2\ Gothic.woff") format('woff'),
+                url("../font/normal/NEXON\ Lv2\ Gothic\ OTF.otf") format('truetype');
+        }
+
         * {
+            font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
             padding: 0px;
             margin: 0px;
+            background-color: white;
+            /* border: 1px solid gray; */
         }
 
         div {
-            padding: 10px 20px;
             display: flex;
             justify-content: space-around;
-            border: 1px solid gray;
+        }
+
+        /* mmmmmmmmm PC mmmmmmmmmm */
+        @media(min-width: 1025px) {
+            body {
+            padding: 5%;
+            height: 100vh;
+            background-color: rgb(253, 248, 241);
+            margin-bottom: 30px;
         }
 
         div#wrapper {
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            margin-left: 8%;
+            margin-right: 8%;
+            border-left: 1px solid red;
+            border-right: 1px solid red;
+            opacity: 90%;
+            border: 2px solid rgba(128, 128, 128, 0.425);
+            padding: 60px 40px;
+            border-radius: 10px;
         }
 
         input#title {
@@ -29,33 +59,117 @@
             padding: 5px 10px;
         }
 
-        textarea#contents {
-            padding: 10px;
+        #contents {
+            width: 80%;
+            display: block;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+
+
+        }
+
+        /* mmmmmmmmm 태블릿 mmmmmmmmmm */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            body {
+            padding: 2%;
+            height: 100vh;
+            background-color: rgb(253, 248, 241);
+        }
+
+        div#wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            opacity: 90%;
+            border: 2px solid rgba(128, 128, 128, 0.425);
+            padding: 60px 40px;
+            border-radius: 10px;
+        }
+
+        input#title {
+            width: 100%;
+            font-size: large;
+            padding: 5px 10px;
+        }
+
+        #contents {
+            width: 98%;
+            /* display: block; */
+            /* margin-top: 5%;
+            margin-bottom: 5%; */
+        }
+
+        form {
+            width: 100%;
+        }
+        }
+
+        /* mmmmmmmmm 모바일 mmmmmmmmmm */
+        @media (max-width: 768px) {
+
+        div#wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            opacity: 90%;
+        }
+
+        input#title {
+            width: 100%;
+            font-size: large;
+            padding: 5px 10px;
+        }
+
+        #contents {
+            width: 92%;
+        }
+
+        #docForm {
+            width: 100%;
+        }
+
         }
     </style>
 </head>
 
 <body>
     <div id="wrapper">
-        <form action="./php/postContents.php" method="post">
-
-            <div id="title">
-                <input id="title" type="text" required placeholder="제목을 입력하세요">
+        <!-- <div id="docForm"> -->
+        <form id="docForm" action="" method="post">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7" id="title">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="title" type="text" placeholder="제목을 입력하세요" required/>
+                        <label for="title">제목</label>
+                    </div>
+                </div>
             </div>
 
-            <div id="contents">
-                <textarea name="contents" id="contents" cols="100" rows="30" required>작성영역</textarea>
+            <div>
+                <div id="contents">
+                    <textarea name="contents" id="contents" cols="100" rows="30" placeholder="내용을 입력하세요" required></textarea>
+                </div>
             </div>
 
             <div id="pic">사진URL
-                <button>업로드</button>
+                <button class="btn btn-primary btn-xl" onclick="alert('사진 업로드')">업로드</button>
             </div>
 
             <div id="submit">
-                <input type="submit">
-                <button onclick="goBack()">취소</button>
+                <button class="btn btn-primary btn-xl" onclick="alert('작성 완료')">완료</button>
+                <!-- <input class="btn btn-primary btn-xl" onclick="alert('문서 작성 완료')" type="submit" placeholder="완료"> -->
+                <button class="btn btn-primary btn-xl" onclick="history.back(); return false;">취소</button>
             </div>
         </form>
+    <!-- </div> -->
     </div>
 </body>
 

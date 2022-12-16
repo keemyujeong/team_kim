@@ -4,12 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/board.css">
-    <script src="./js/board.js"></script>
+    <!-- <link rel="stylesheet" href="./css/index/styles.css">
+    <script src="./js/board/board.js"></script>
+    <script src="./php/board/board.php"></script> -->
+    <link rel="stylesheet" href="./css/index/styles.css">
+    <script src="./js/board/board.js"></script>
+    <script src="./php/board/board.php"></script>
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@28.2.1/dist/ag-grid-enterprise.min.js"></script>
-    <title>게시판</title>
     <style>
+                @font-face {
+            font-family: "My Font";
+            src: url("../font/normal/NEXON\ Lv2\ Gothic.eot") format('embedded-opentype'),
+                url("../font/normal/NEXON\ Lv2\ Gothic.ttf"),
+                url("../font/normal/NEXON\ Lv2\ Gothic.woff") format('woff'),
+                url("../font/normal/NEXON\ Lv2\ Gothic\ OTF.otf") format('truetype');
+        }
+
         * {
+            font-family: 'My Font', 'NEXON\ Lv2\ Gothic';
             padding: 0px;
             margin: 0px;
         }
@@ -17,6 +29,12 @@
         div#myGrid {
             margin-left: auto;
             margin-right: auto;
+            margin-top: 3%;
+            width: 100%;
+        }
+
+        .container{
+            background-color: white;
         }
 
         button#createDoc {
@@ -25,29 +43,114 @@
             margin-right: auto;
             margin-top: 20px;
         }
+
+        /* mmmmmmmmm PC mmmmmmmmmm */
+        @media(min-width: 1025px) {
+            div#myGrid {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                width: 100%;
+                height: 10vh;
+            }
+
+            body {
+                padding: 5%;
+                height: 100vh;
+                background-color: rgb(253, 248, 241);
+            }
+
+            .container {
+                height: 85vh;
+                border: 2px solid rgba(128, 128, 128, 0.425);
+                padding: 60px 40px;
+                border-radius: 10px;
+            }
+        }
+
+        /* mmmmmmmmm 태블릿 mmmmmmmmmm */
+        @media (min-width: 769px) and (max-width: 1024px) {
+
+            button#createDoc {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            div#myGrid {
+                margin-left: auto;
+                margin-right: auto;
+                /* margin-top: 30px; */
+                width: 100%;
+            }
+
+            .grid-wrapper {
+                width: 100%;
+            }
+
+            body {
+                padding: 3%;
+                height: 100vh;
+                background-color: rgb(253, 248, 241);
+            }
+
+            .container {
+                height: 85vh;
+                border: 2px solid rgba(128, 128, 128, 0.425);
+                /* padding: 60px 40px; */
+                border-radius: 10px;
+            }
+        }
+
+        /* mmmmmmmmm 모바일 mmmmmmmmmm */
+        @media (max-width: 768px) {
+
+            button#createDoc {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            div#myGrid {
+                width: 100%;
+                height: 100%;
+            }
+
+            p#board-title {
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            body {
+                background-color: white;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                /* border: 2px solid green; */
+
+                /* padding: 60px 40px; */
+                /* border-radius: 10px; */
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-black">게시판</h2>
-        <!-- Icon Divider-->
-        <div class="divider-custom divider-light">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line"></div>
+        <div class="board-title-div"
+            style="text-align: center; margin-top: 20px; margin-bottom: 20px; font-size: 30px;">
+            <p id="board-title">내 요리를 자랑하고 다른 사람들과 소통해 보세요!</p>
         </div>
-        <!-- About Section Content-->
-        <div class="row">
-            <div class="col-lg-4 ms-auto">
-                <p class="lead">내 요리를 자랑하고 다른 사람들과 소통해 보세요!</p>
+
+        <button class="btn btn-primary btn-xl" id="createDoc" onclick="createDoc()">글쓰기</button>
+
+        <div class="grid-wrapper">
+            <div id="myGrid" class="ag-theme-alpine" style="height: 55vh;">
             </div>
         </div>
-        <div class="grid-wrapper">
-            <div id="myGrid" class="ag-theme-alpine" style="width: 65%; height: 500px;"></div>
-        </div>
-        <button class="btn btn-primary btn-xl disabled" id="createDoc submitButton" onclick="createDoc()">글쓰기</button>
     </div>
 </body>
 
