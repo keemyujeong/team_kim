@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="./css/index/styles.css" rel="stylesheet"/>
+        <link href="css/index/styles.css" rel="stylesheet"/>
 
         <style>
             @font-face{
@@ -44,16 +44,16 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1" id="recipe"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">레시피</a>
                             <ul id="recipeList">
-                                <li id="ko"><a href="./test_frame korean.html" class="recipeMenu">한식</a></li>
-                                <li id="ch"><a href="./test_frame chinese.html" class="recipeMenu">중식</a></li>
-                                <li id="jp"><a href="./test_frame japanese.html" class="recipeMenu">일식</a></li>
-                                <li id="us"><a href="./test_frame western.html" class="recipeMenu">양식</a></li>
+                                <li id="ko"><a href="./kofood.html" class="recipeMenu">한식</a></li>
+                                <li id="ch"><a href="./chfood.html" class="recipeMenu">중식</a></li>
+                                <li id="jp"><a href="./jpfood.html" class="recipeMenu">일식</a></li>
+                                <li id="us"><a href="./usfood.html" class="recipeMenu">양식</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./board-frame.html">게시판</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./frame-aboutus.html">About Us</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./board.html">게시판</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./aboutus.html">About Us</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./login.html">로그인</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./signUp.html">회원가입</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./signup.html">회원가입</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,6 +82,71 @@
             </div>
         </header>
 
+
+
+        <!-- Recipe Section-->
+        <section class="page-section portfolio" id="portfolio" style="box-shadow: 5px 5px 35px 5px rgb(0, 0, 0);">
+            <div class="container">
+                <!-- Recipe Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">recipe</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Recipe Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Recipe Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/index/bibimbap.png" alt="..." />
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">한식</p>
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">Korean Food</p>
+                        </div>
+                    </div>
+                    <!-- Recipe Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/index/buns.png" alt="..." />
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">중식</p>
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">Chinese Food</p>
+                        </div>
+                    </div>
+                    <!-- Recipe Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/index/sushi.png" alt="..." />
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">일식</p>
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">Japanese Food</p>
+                        </div>
+                    </div>
+                    <!-- Recipe Item 4-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/index/steak.png" alt="..." />
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">양식</p>
+                            <p style="text-align: center; margin-top: 20px; font-size: 20px; font-weight: bold;">Western Food</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
         <!-- About Section-->
         <section class="page-section bg-custom text-white mb-0" id="about">
             <div class="container">
@@ -101,7 +166,7 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="./board-frame.html">
+                    <a class="btn btn-xl btn-outline-light" href="./board.html">
                         게시판으로 이동
                     </a>
                 </div>
@@ -162,7 +227,7 @@
                                     <img class="img-fluid rounded mb-5" src="img/index/bibimbap.png" alt="..." width="200px" />
                                     <!-- Recipe Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./test_frame korean.html'">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./kofood.html'">
                                         한식 레시피 보기
                                     </button>
                                 </div>
@@ -193,7 +258,7 @@
                                     <img class="img-fluid rounded mb-5" src="img/index/buns.png" alt="..." width="200px" />
                                     <!-- Recipe Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./test_frame chinese.html'">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./chfood.html'">
                                         중식 레시피 보기
                                     </button>
                                 </div>
@@ -224,7 +289,7 @@
                                     <img class="img-fluid rounded mb-5" src="img/index/sushi.png" alt="..." width="200px" />
                                     <!-- Recipe Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./test_frame japanese.html'">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./jpfood.html'">
                                         일식 레시피 보기
                                     </button>
                                 </div>
@@ -255,7 +320,7 @@
                                     <img class="img-fluid rounded mb-5" src="img/index/steak.png" alt="..." width="200px" />
                                     <!-- Recipe Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./test_frame western.html'">
+                                    <button class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='./usfood.html'">
                                         양식 레시피 보기
                                     </button>
                                 </div>
