@@ -4333,7 +4333,11 @@ textarea.form-control-lg {
     overflow-y: visible;
   }
 }
+<<<<<<< HEAD
 @media (min-width: 992px) {
+=======
+@media (min-width: 1025px) {
+>>>>>>> 8eecd1882d5ac006e39d8ed971005b792d1ea3ed
   .navbar-expand-lg {
     flex-wrap: nowrap;
     justify-content: flex-start;
