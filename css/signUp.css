@@ -68,3 +68,31 @@ h3{
   }
 }
 
+<<<<<<< HEAD
+.input:invalid {
+  max-width: 680px;
+  margin-top: 80px;
+  padding: 32px;
+  
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+}
+
+
+
+.error{
+    color: red;
+    font-weight: bold;
+    font-family: "My Font";
+}
+=======
+>>>>>>> 1feeef7d003c8f6719f2926fdfcfc25c06cc0c86

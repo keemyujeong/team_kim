@@ -20,6 +20,17 @@
    
     $result = mysqli_query($db, $sql);
 
+    if(isset($_POST['name'])&& isset($_POST['email'])&& isset($_POST['password'])&& isset($_POST['zipcode'])&& isset($_POST['address'])&& isset($_POST['phonecall'])){
+        //보안을 강화 (시큐어코딩, 보안코딩)
+        mysqli_real_escape_string($db,$_POST['name']);
+        mysqli_real_escape_string($db,$_POST['email']);
+        mysqli_real_escape_string($db,$_POST['zipcode']);
+        mysqli_real_escape_string($db,$_POST['password']);
+        mysqli_real_escape_string($db,$_POST['address']);
+        mysqli_real_escape_string($db,$_POST['phonecall']);
+
+      
+    }
 
     if($result) echo "insert success";
     else echo "insert failed";
