@@ -132,7 +132,7 @@
             width: 92%;
         }
 
-        form {
+        #docForm {
             width: 100%;
         }
 
@@ -142,6 +142,7 @@
 
 <body>
     <div id="wrapper">
+        <!-- <div id="docForm"> -->
         <form id="docForm" action="" method="post">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7" id="title">
@@ -163,10 +164,12 @@
             </div>
 
             <div id="submit">
-                <input class="btn btn-primary btn-xl" onclick="alert('문서 작성 완료')" type="submit" placeholder="완료">
+                <button class="btn btn-primary btn-xl" onclick="alert('작성 완료')">완료</button>
+                <!-- <input class="btn btn-primary btn-xl" onclick="alert('문서 작성 완료')" type="submit" placeholder="완료"> -->
                 <button class="btn btn-primary btn-xl" onclick="history.back(); return false;">취소</button>
             </div>
         </form>
+    <!-- </div> -->
     </div>
 </body>
 
